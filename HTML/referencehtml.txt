@@ -1,0 +1,133 @@
+SEE MDN REFERENCE FOR MORE GUIDANCE!
+
+-----------------------------------------------------------------------------------
+TEXT
+-----------------------------------------------------------------------------------
+
+html:5 - Creates the HTML Boilerplate
+
+<h1> </h1> - Creates a title element. Can be h2, 3, 4, and so on.
+
+<p> </p> - Creates a paragraph
+
+<b> </b> - Creates bold text
+
+<i> </i> - Creates italic text
+
+<ul> </ul> - Creates unordered list
+
+<ol> </ol> - Creates ordered list
+
+<li> </li> - Inserts list element
+
+<dl> </dl> - Description list
+
+<dt> </dt> - Description title
+
+<dd> </dd> - Description's description
+
+<blockquote> </blockquote> - Separates a piece of text that is a blockquote
+
+-----------------------------------------------------------------------------------
+INTEGRATIONS
+-----------------------------------------------------------------------------------
+
+<a href= "link"> TEXT </a> - Inserts links
+
+<img src="" alt=""> - Adds images
+
+<base href=""> - Indicates a BASE URL to be used throughout the document, like google.com/
+
+<meta> - Indicates other metadata that doesn't have an specific element
+
+-----------------------------------------------------------------------------------
+MISC
+-----------------------------------------------------------------------------------
+
+<!-- text --> - Adds comment
+
+<div> </div> - Block content divider
+
+<span> </span> - Inline content divider
+
+<hr> - Creates horizontal line
+
+<br> - Breaks text
+
+<sup> </sup> - Makes superscript text
+
+<sub> </sub> - Makes subscript text
+
+-----------------------------------------------------------------------------------
+EFFICIENCY
+-----------------------------------------------------------------------------------
+
+ENTITY CODES - Different codes that create specific characters - &#xxx;
+
+<header>, <main>, <section>, <nav>, <article>, <details>, <aside>, <summary>, <footer> - Semantic markup.
+Works like divs, but makes the code better.
+
+
+EMMET - Extremely helpful shortcuts. Follows some of the best tools:
+
+
+> - Nest elements
++ - Place elements on the same level
+*n - Multiplies how many times an element will appear, where n is the number of times
+() - Groups elements for more complex syntax
+$ - Using this after any given text will number the following items
+{} - Using after an element (for example, an anchor tag a{click me}, will add text to the element.
+
+-----------------------------------------------------------------------------------
+TABLES 
+-----------------------------------------------------------------------------------
+
+<table> </table> - Creates a table division
+
+<td> </td> - Defines a table cell element - Nested inside tr
+
+<tr> </tr> - Defines a table row element
+
+<th> </th> - Defines table header. Needs to be inside a tr, just like a td
+
+<thead>, <tbody> and <tfoot> - Content wrappers for tables
+
+colspan="x" and rowspan="x" - Go inside th, defines how many rows or columns the text takes
+
+-----------------------------------------------------------------------------------
+FORMS
+-----------------------------------------------------------------------------------
+ 
+<form action="x"> </form> - Form element container
+
+action="x"- Tells what action the form will perform
+
+<input type="x" placeholder="x" id="x" value="x" name="x"> - Creates an input, that can have a lot of types
+
+type="x" - Specifies input type. Can be text, password, number, range, color, etc.
+
+placeholder="x" - Specifies placeholder text for an input
+
+id="x"- Gives the input an id
+
+value="x"- Can add text or a value TO the specified input, not inside it
+
+name="x"- Specifies how the data inserted into an input will be called, and how it will be searched
+
+<label for="x"> </label> - Associates a label to an input, through the id attribute. 
+
+<button> </button> - Creates a button. Will make the action specified in the form attribute.
+
+<select name="x" id="x"> option </select> - Creates a selection box inside a form
+
+<option value="x"> TEXT </option> - Creates an option inside a selection box 
+
+FORM VALIDATION - Can add minlength, maxlength and required
+
+-----------------------------------------------------------------------------------
+CSS ELEMENTS
+-----------------------------------------------------------------------------------
+
+class=""- Inside elements, gives classes to elements. HOLD OPTION AND CLICK TO SELECT MULTIPLE ELEMENTS
+
+

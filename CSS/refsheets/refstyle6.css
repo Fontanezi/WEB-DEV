@@ -1,0 +1,36 @@
+body{
+    background-color: white;
+}
+
+nav{
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    font-size: 30px;
+    color: black;
+    transition: 0.25s;
+    width: 370px;
+}
+
+nav:hover{
+    transform: translateY(-3px);
+}
+
+hr{
+    transform: translateX(-280px);
+    width: 700px;
+}
+
+.img{
+    width:350px;
+    margin: 20px;
+    transition: 0.25s
+}
+
+.img:hover{
+transform: scale(1.2);
+box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.6)
+}
+
+section{
+    padding: 35px 35px 35px 35px;
+}

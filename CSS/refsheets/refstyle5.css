@@ -1,0 +1,25 @@
+body {
+    font-family: 'Audiowide', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(6, 11, 31);
+}
+
+p {
+    background: none;
+    font-size: 50px;
+    color: rgb(220, 101, 3);
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 30px 50px;
+    transition: 0.25s;
+}
+
+p:hover {
+    border-color: rgb(228, 217, 60);
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0.5em 0.5em -0.4em rgb(228, 217, 60);
+    transform: translateY(-5px);
+}

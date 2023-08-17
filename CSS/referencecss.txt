@@ -1,0 +1,318 @@
+SEE MDN REFERENCE FOR MORE GUIDANCE!
+
+-----------------------------------------------------------------------------------
+STRUCTURE
+-----------------------------------------------------------------------------------
+
+selector{
+    property: value;
+}
+
+-----------------------------------------------------------------------------------
+BASIC PROPERTIES
+-----------------------------------------------------------------------------------
+
+<link rel="stylesheet" href="x"> - Goes inside HTML head. CSS reference element. Rel is default, href includes 
+the stylesheet.
+
+color: - Changes text color
+
+background-color - Changes background color
+
+COLOR PROPERTIES - NAME (magenta) - RGB (0,0,0) - HEX (#ffff00)
+
+-----------------------------------------------------------------------------------
+TEXT
+-----------------------------------------------------------------------------------
+
+text-align: right, left, center, justify - Change ELEMENT alignment
+
+font-weight: normal, bold, lighter, bolder, and numeric values - Changes the font thickness
+
+text-decoration: underline, overline, line-through. Can also choose color and style (dotted, wavy, etc.) - 
+Changes text decoration
+
+line-height: - Controls the line height
+
+letter-spacing: - Controls the spacing between letters 
+
+font-size: x px - Changes font size. Pixels are not the best, will learn a better unit soon
+
+font-family: "type"; "type" - Specifies font type. USE FONT STACKS
+
+text-transform: uppercase, lowercase, etc. - Transforms text
+
+-----------------------------------------------------------------------------------
+SELECTORS
+-----------------------------------------------------------------------------------
+
+-The element selector is the common one we have learned
+
+*{} - The universal selector, selects everything
+
+h1, h2{} - Selector list, applies properties to all selected elements, using commas
+
+#nameid {} - The ID selector, styles only the specified ID
+
+.nameofclass{} -  The class selector, styles specified classes
+
+"x" "y"{} - The descendant selector. Styles all "y" inside "x"
+
+"x" + "y"{} - Adjacent selector, style all "y" directly after "x"(on the same level)
+
+"x" > "y{} - Direct descendant, style all "y" that's a direct descendant of "x""
+ 
+"x"[type="y"]{} - Attribute selector, of "x", style all of type "y"
+
+-----------------------------------------------------------------------------------
+PSEUDO CLASSES
+-----------------------------------------------------------------------------------
+
+:hover - Changes style when hovered
+
+:active - Changes style when element is active
+
+:nth-of-type() - Number of the styled item. If you use Xn, it jumps X elements
+
+-----------------------------------------------------------------------------------
+PSEUDO ELEMENTS
+-----------------------------------------------------------------------------------
+
+::first-line - Styles first line
+
+::first-letter - Styles first letter
+
+::selection - Styles selection
+
+::before - Adds and styles content before
+
+::after - Adds and styles content after
+
+-----------------------------------------------------------------------------------
+BOXES
+-----------------------------------------------------------------------------------
+
+width: - Changes the width of the CONTENT BOX
+
+height: - Changes the height of the CONTENT BOX
+
+border-width: - Controls the border width    
+
+border-color: - Controls the border color
+
+border-style: - Controls the border style
+
+-CAN ADD SIDE VARIATIONS TO EACH OF THEM
+
+border: - The border shorthand, can set width, style and color of the border all at once
+
+border-radius: - Changes border corner curvature. Use percents to make circles. Pixels to make borders
+
+padding-"x"- Changes the padding size in "x" direction
+
+padding: - Padding shorthand, sets padding all at once. Can be All, V and H, T,H and B, and T,R,B,L 
+
+margin-"x"- Changes margin in "x" direction
+
+margin: - Margin shorthand, works just like padding
+
+margin: auto - Centers block level elements
+
+box-shadow: - Creates box shadow in offset-x | offset-y | blur-radius | spread-radius | color
+
+display: inline - Makes objects behave inline
+
+display: block - Makes objects behave block
+
+display: inline-block - Makes inline elements behave like a block (properties)
+
+display:none - Makes element disappear
+
+-----------------------------------------------------------------------------------
+OTHER ELEMENTS
+-----------------------------------------------------------------------------------
+
+rgba (255, 112, 204, 0.5) - The ALPHA CHANNEL, controls transparency
+
+opacity: 0.x - Same thing, but impacts all elements in the region
+
+position: - Changes objects positions
+ 
+-Static
+-Relative - To its original position, its space is kept
+-Absolute - Relative to the body or ancestor. Its space is ignored
+-Fixed - Only relative to the body. Doesn't move from its position
+-Sticky - Starts moving then stays static
+
+transition: - Makes item transitions, in the order: Property, duration, timing function, delay
+
+transform: - Transforms elements
+
+transform-origin: - Defines where the transformation originates from
+
+THESE GO AFTER TRANSFORM:
+
+rotate(xdeg) - Rotates the element in X, Y and Z directions in x degrees
+
+scale(x) - Sets the scale in X, Y and Z directions in x size
+
+translate(x) - Moves elements in X, Y and Z directions in x distance
+
+skew(x) - Distorts image in X, Y and Z directions in x degrees
+
+-----------------------------------------------------------------------------------
+BACKGROUND
+-----------------------------------------------------------------------------------
+
+background-image: url() - Adds image as background
+
+background-size: cover - Fits the image and crops if needed; contain - No stretch or cropping, might repeat
+
+background-position: - Where the background starts and shows
+
+background: - The background shorthand. Controls all background properties and the order doesn't matter. 
+HOWEVER, position/size must be specifically like this
+
+-----------------------------------------------------------------------------------
+FONTS
+-----------------------------------------------------------------------------------
+
+-Use the link element of Google Fonts in the <head> to add fonts. Refer to them in the CSS file with ''.
+
+-----------------------------------------------------------------------------------
+FLEXBOX
+-----------------------------------------------------------------------------------
+
+display: flex - Activates Flexbox 
+
+flex-direction: - Controls the content main axis (row, row-reverse, column, column-reverse)
+
+justify-content: - Controls how the content is distributed across the main axis. THESE REFER TO THE AXIS:
+flex-start, flex-end, center, space-around, space-between, space-evenly
+
+flex-wrap: - Wrap element to the next row / column. Wrap or wrap-reverse
+
+align-items: - The "justify" for the cross axis
+
+align-content: - Aligns multiple rows or columns, modifies the space between them. Must have flex-wrap ON
+
+align-self: - Same as align-content, but for individual items
+
+flex-basis: - Initial size of content inside a box, ignores width and height
+
+flex-grow: - Tells the object how much it should grow in the remaining space. Has no units. WON'T WORK IF WRAP IS ON
+
+flex-shrink: - Same as grow, but for shrinking. WON'T WORK IF WRAP IS ON
+
+flex: - The flex shorthand. Grow, shrink and basis. One value with unit is basis, without unit is grow
+
+-----------------------------------------------------------------------------------
+MEDIA QUERIES
+-----------------------------------------------------------------------------------
+
+@media ( ){} - Indicates the media query
+
+INSIDE PARENTHESIS, USE THE QUERY PROPERTY, INSIDE THE SELECTOR, THE ITEMS
+
+min-width, max-width, orientation: - Inside parenthesis
+
+Using "and" between parenthesis will combine properties
+
+-----------------------------------------------------------------------------------
+BOOTSTRAP
+-----------------------------------------------------------------------------------
+
+A CSS Framework. Can be included in the code adding the <link> and <script> elements from the site.
+Works using classes
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+.container - Contains elements in a responsive box. Can use -sm, md, lg and xl to specify the responsiveness
+
+.container-fluid -  Contains elements in a responsive box that takes up a 100% of the viewport
+
+.btn --------- - Button class, has a lot of types. Look into documentation. It's possible to combine styles
+Can add the disabled attribute after the class
+
+display-1,2,3,4 - Makes larger headings. Not responsive by default
+
+lead - Changes the style of paragraphs. Makes them stand out
+
+blockquote - Makes text "blockquote"like
+
+blockquote-footer - Adds a "name credit"/ citation style
+
+mb, t, s, e - 0  - Easy way to add margin in respect to the direction and pixel number
+
+text-start, end, center - Aligns text
+
+text-"category"- Changes text color according to bootstrap categories or color
+
+bg-"category" - Same thing as the one before, but for background
+
+role attribute - Acessibility, works kinda like the "alt"
+
+badge-"color" - Creates an "icon" inside elements. Should be inside a span
+
+btn-group - In a container with buttons, will group them
+
+alert alert- - Creates page alert. Can use alert-heading as a complement
+
+GRID - Using the "row" class in a div and adding content to it, we can create a responsive bootstrap grid.
+Add the col-u class inside an item, where u is the number of units used. There are 12 units to work with. 
+If we use just col, it will set the space automatically in regard of how many items there are
+
+col- xs,sm,md,lg,xl,xxl- u - Sets the size at specific screen sizes. Can use all at the same time
+
+img-fluid - Makes images responsive inside a container
+
+no-gutters - Removes margin between elements
+
+align-items-start, center, end - Works just like Flexbox
+
+align-self-start, center, end - Works just like Flexbox
+
+justify-content-start, center, end, around, between - Works just like Flexbox
+
+CAN USE SIZE DIVISION IN ALL OF THEM
+
+form-control - Add inside an input
+
+g-x - Adds gutter size, where x is size in px
+
+WE CAN MANIPULATE FORMS USING THE GRID PROPERTIES
+
+NAV - Use the docs references
+
+ICONS - Paste the svgs contained in the docs
+
+input-group - Groups things inside inputs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+

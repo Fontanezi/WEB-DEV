@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Bench</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="scr.css">
+</head>
+
+<body>
+    <div class="columns">
+        <div class="column"></div>
+        <section class="column">
+            <div class="box">
+                <img src="https://www.tennisdepartment.com/wp-content/uploads/2020/08/best-ping-pong-paddles.jpg"
+                    alt="Ping-Pong paddle.">
+                <h1 class="title is-6">Ping Pong Score Keeper</h1>
+                <h2 class="title is-1"><span class="p1Score">0</span> to <span class="p2Score">0</span></h2>
+                <p class="subtitle is-6">Use the buttons below to keep score.</p>
+                <label for="plays"><strong>Playing To</strong></label>
+                <div class="select is-rounded is-small mb-5">
+                    <select name="plays" id="plays">
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <footer class="card-footer">
+                    <button id="p1" class="button is-success card-footer-item is-rounded">+1 Player One</button>
+                    <button id="p2" class="button is-info card-footer-item is-rounded">+1 Player Two</button>
+                    <button id="reset" class="button is-danger card-footer-item is-rounded">Reset</button>
+                </footer>
+            </div>
+        </section>
+        <div class="column"></div>
+    </div>
+    <script src="kpr.js"></script>
+</body>
+
+</html>

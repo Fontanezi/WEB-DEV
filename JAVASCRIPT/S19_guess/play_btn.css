@@ -1,0 +1,28 @@
+body {
+    font-family: 'Audiowide', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(6, 11, 31);
+}
+
+.play_btn {
+    background: none;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 50px;
+    color: rgb(220, 101, 3);
+    text-decoration: underline transparent;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 30px 50px;
+    transition: 0.25s;
+}
+
+.play_btn:hover {
+    border-color: rgb(228, 217, 60);
+    font-family: 'Audiowide', sans-serif;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0.5em 0.5em -0.4em rgb(228, 217, 60);
+    transform: translateY(-5px);
+}

@@ -1,0 +1,671 @@
+SEE MDN REFERENCE FOR MORE GUIDANCE!
+
+Usually, scripts are used in Javascript coding, but we will be using the Chrome console for now.
+
+-----------------------------------------------------------------------------------
+PRIMITIVE TYPES - Data types.
+-----------------------------------------------------------------------------------
+
+Number - Positive, negative, whole and decimal numbers
+
+String - Text. Should be in quotes
+
+Boolean - True and false values (should be lowercase)
+
+Null - No value. Something is empty intentionally
+
+Undefined - Exists, but doesn't have an assigned value
+
+-----------------------------------------------------------------------------------
+BASICS AND NUMBERS
+-----------------------------------------------------------------------------------
+
+Number operations: +, -, *, /, %, **. PEMDAS is valid.
+
+NaN - Defines something that is not a number, but is a number type
+
+typeof "x" - Tells the type of info we're working with
+
+let "name" = "value" - Names data! Tells JS to store data with a specific name
+
+Using +=, -=, "x"=, will manipulate the identified variable in the chosen amount
+
+Using ++, --, will manipulate data by ONE
+
+const "name"= "value"- Names data just like let, but DOESN'T CHANGE, it's a constant
+
+-----------------------------------------------------------------------------------
+STRINGS
+-----------------------------------------------------------------------------------
+
+text["x"] - Adding a variable name and an "x" number will show the indexed character
+
+text.length - Tells the number of CHARACTERS, not indexes
+
+Concatenation - Operations with strings. Javascript will concatenate different primitive types
+
+METHODS - thing.method() - There are a bunch of them, used for string manipulation. Can be chained
+
+.toUpperCase() - Uppercases sentences
+
+.toLowerCase() - Lowercases sentences
+
+.trim() - Removes outside spacing
+
+.indexOf("x") - Gives first index occurence of "x". if there's none, returns -1
+
+.slice("x", "x") - Slices a part of a string based on the index reference
+
+.replace("x", "y") - Replaces characters 
+
+.repeat("x") - Repeats strings "x" times
+
+TEMPLATE LITERALS - Very useful. Allow embedded expressions. To use them, our expression MUST be contained
+within `` instead of "". Adding the ${} indicates a template, and we can include whatever is needed inside the
+curly braces
+
+MATH OBJECT - Object used for math operations. To activate it, write Math. To use a function,
+write Math.f, where f is the wanted function
+
+RANDOM NUMBERS - To generate a random number between 0 and 1, use the .random() function. It can be
+customized using other functions. SEE MDN FOR MORE REFERENCES REGARDING MATH
+
+-----------------------------------------------------------------------------------
+DECISION MAKING
+-----------------------------------------------------------------------------------
+
+Comparison operators - >, <, >=, <=, == (Equal, equality of value), === (Strictly equal, equality of type), 
+!= (Not equal, equality of value), !== (Strictly not equal, equality of type)
+
+console.log() - Prints whatever is inside the parenthesis
+
+alert("x") - Creates a web alert
+
+prompt("x") - Creates web prompt
+
+parseInt() - Finds integer inside inserted element
+
+<script src=""> </script> - Links JS file to the HTML file. Should be placed in the end of the body
+
+if ("condition"){ - If statement, executes code inside the curly braces if the conditions are met
+    code
+}
+
+else if ("condition"){ - Else If statement, executes code inside the curly braces if the conditions are met, 
+         code            AFTER an if that didn't meet it's conditions
+}
+
+else { - Else statement, executes code inside the curly braces if no Ifs or Else Ifs conditions are met
+    code
+}
+
+&& - AND operator. If both rules are true, it displays true. ("info" && "info")
+
+|| - OR operator. If one of the rules is true, it displays true. ("info" || "info")
+
+! - NOT operator. Negates expressions, flips values. Can be used as "if this, no!"
+
+-----------------------------------------------------------------------------------
+ARRAYS
+-----------------------------------------------------------------------------------
+
+ARRAY - A collection of values, a list. Use [] after let or const to create. Is indexed
+
+- To find an element inside an array, call its index, just like in strings. Elements can also be 
+modified by using =
+
+ARRAY METHODS:
+
+.push("x") - Adds thing to the end of an array
+
+.pop() - Removes array last item
+
+.shift() - Removes array first item
+
+.unshift("x") - Adds item to the start of an array
+
+.concat("x") - Merges arrays
+
+.includes("x") - Asks if item is in an array
+
+.reverse() - Reverses an array
+
+.slice("x") - Slices a part of an array. Works just like with strings
+
+.splice(start, delete, "x") - Manipulates objects inside an array
+
+.sort() - Sorts array items
+
+-Arrays can be nested. To find items in nested arrays, use index of the array, then index of item, like:
+variable[array] [item]
+
+-ARRAYS ARE OBJECTS
+
+-----------------------------------------------------------------------------------
+OBJECT LITERALS
+-----------------------------------------------------------------------------------
+
+const thing = {  - This is an object structure. DON'T FORGET THE COMMAS
+     Key : value,
+}
+
+To call object data - thing.key or thing["key"]
+
+To modify object data - thing.key = "newvalue"
+
+-----------------------------------------------------------------------------------
+LOOPS
+-----------------------------------------------------------------------------------
+
+for (initalExpression ; condition ; incrementExpression){ - For loop, consists of a variable, condition and sequence
+    code
+}
+
+Looping over arrays - Start at 0 and print until array length, or vice-versa
+
+NESTED LOOPS EXAMPLE:
+
+const seatingChart = [
+    ['Kristen', 'Erik', 'Namita'],
+    ['Geoffrey', 'Juanita', 'Antonio', 'Kevin'],
+    ['Yuma', 'Sakura', 'Jack', 'Erika']
+]
+
+for (let i=0; i<seatingChart.length; i++){
+    console.log(`ROW #${i}`)
+    const row = seatingChart[i]
+    for (let j=0; j<row.length; j++){
+        console.log(row[j])
+    }
+}
+
+while (condition){ - While loop, while condition is met, loop
+    code
+}
+
+for ( let "name" of "iterable"){ - Used for iterating items. The "name" is created by us. 
+                                   Basically iterates data without all that "for" syntax.
+}
+
+for...in - Same structure but using "in". Using for iterating over objects
+
+Object.keys(object) - Makes an array using keys of an object
+
+-----------------------------------------------------------------------------------
+FUNCTIONS
+-----------------------------------------------------------------------------------
+
+-Reusable procedures. Allows us to write reusable, modular code. Chunk of code to be reused and modified.
+
+function funcName(){ - Function declaration structure
+    code
+}
+
+funcName() - Function execution structure
+
+ARGUMENTS - Inputs for functions. Go inside the parenthesis in functions, and are called parameters.
+When they are executed, they're called arguments. 
+
+function greet(name){ 
+    console.log(`Hello, ${name}`) ------------------------>      greet("Bob")  ---------> Hello, Bob
+}
+
+To use more than one argument, separate parameters with commas. When calling arguments, be careful with the order.
+THE ORDER REALLY MATTERS!
+
+RETURNS -Allows functions inputs to be saved, not only outputted. Use inside the output. Returns stop the function!
+It's only possible to return ONE value - return
+
+const "name" = function(){  - FUNCTION EXPRESSION. Functions can be saved as variables
+    code
+}
+
+HIGHER ORDER FUNCTIONS - Functions that use other functions as arguments, or return a function:
+
+function callTwice(func){                                                 callTwice(rollDie)
+    func();
+    func();      
+}
+                                                     ---------------->     2, 5
+function rollDie(){
+    const roll = math.floor(math.random() * 6) + 1     
+    console.log(roll)
+}
+
+
+
+function makeBetweenFunc(min, max){
+    return function(num){                    -----------------------> const isChild= makeBetweenFunc(0. 18)
+        return num >= min && num <= max;                               isChild(num) = false
+    }
+}
+
+
+DEFINING METHODS - Function that has been defined as a property of an Object. DON'T FORGET THE COMMA
+
+const myMath = {
+    square(num){
+        return num*num
+    },
+}
+
+
+THIS - this.thing, refers to OBJECTS inside methods. To use object variables inside functions, this is needed
+
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+try{
+    code that could go wrong         -------------> Anti-error feature. (e) prints the error
+} catch {
+    what to do
+}
+
+-----------------------------------------------------------------------------------
+CALLBACKS AND ARRAY METHODS
+-----------------------------------------------------------------------------------
+
+forEach - Runs function once per item in an array.    
+
+array.forEach(funcion(n){
+    console.log(n)
+})
+
+
+map - Does the same as forEach, but creates a new array.
+
+const array2 = array1.map(function(n){
+    console.log(n*2)
+})
+
+
+Arrow functions - Compact way of creating functions
+
+const add = (x,y) => [
+    return x + y;
+]
+
+
+AF Implicit Returns - When we return ONLY ONE value
+
+const add = (x,y) => (x+y)  or simply x+y
+
+
+setTimeout - Creates a time interval delay for when some code will run, in ms.
+
+setTimeout(function, ms)
+
+
+setInterval - Has the same structure, but repeats things in an interval
+
+clearInterval(id) - Stops an interval loop. The id is the repetition number
+
+
+array.filter(func condition) - Filters items from an array and creates a new one
+
+
+some and every - Both .some() and .every tell if items inside and array meet a condition, but
+every evaluates the whole array, while some just looks for ONE item that meets the requirement.
+
+reduce - Keeps an info and compares it to the rest of the array. Keep the "age line" thinking.
+REDUCES THINGS TO ONE VALUE. Adding an initial value to the accumulator: Add a comma after 
+everything, then add value.
+
+thing.reduce((accumulator, current) => {
+    return accumulator + current;
+});
+
+Default params - Adds default values to parameters. Just add = and the value you want. Should be the last parameter
+
+
+SPREAD
+
+-In function calls, add ... before array or element name to SPREAD its elements as individuals.
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Math.max(...nums)  --------> If we didn't spread, it would read the array, NOT the elements
+
+-In arrays, add ... before array name to copy it. Add more to create a big array.
+const cats = [ned, chad]
+const dogs = [bro, mo]
+const allPets = (...cats, ...dogs)
+
+-With objects, add ... before object name to copy it. Can also modify object with comma. Similar to in arrays.
+
+
+REST - ... inside parameters. Stores all inserted parameters and puts them in an array. Allow for "infinite" args.
+
+DESTRUCTURING ARRAYS - const [n1, n2] = array; - Singles out array elements
+
+DESTRUCTURING OBJECTS - const {propname, propname} = obj;
+
+{varOld : varNew} - Modifies object values. Can add default values
+
+DESTRUCTURING PARAMS - When using objects as parameters, extract the ones you want with ({obj, obj})
+
+-----------------------------------------------------------------------------------
+DOM
+-----------------------------------------------------------------------------------
+
+Document Object Model - The "window" to JS in a page. Objects that you can interact with in a page.
+
+Document - Is the JS object that wraps all the others.
+HTML + CSS ----------------> Have JS objects created, relationship is kept
+To see it, type console.dir(document)
+
+getElementById - Selects specific element JS object by ID. We can define the object in a variable. Then, console.dir it.
+document.getElementById('ID') ------> The ID must be a string. If there's none, returns null.
+
+getElementByTagName - Selects elements with an specific tag (a, p, h1), and returns an HTML collection (NOT AN ARRAY!)
+document.getElementByTagName('tag'). if there's none, returns empty HTML collection.
+
+getElementByClassName - Same principle as getElementByTagName
+
+querySelector('thing') - Universal selector. Just need to indicate by WHAT we're searching, just like in CSS.
+Only shows the first one, but can be modified with adequate attributes.
+
+querySelectorAll('thing') - Same thing, but selects ALL.
+
+document.querySelector('p').innerText - Related to content inside elements. Shows the element inner text.
+
+.textContent - Related to content inside elements. Shows all text elements, despite of their other elements.
+Bold text for example, would not appear with innerText. Shows how it's written in the code.
+
+.innerHTML - Related to content inside elements. Shows ALL the HTML content, including elements.
+
+ALL OF THESE CAN BE MODIFIED WITH ='' AFTER. KEEP IN MIND THAT THEY WILL MODIFY THEIR ASSIGNED CONTENT.
+FOR EXAMPLE, WHILE INNERHTML CAN MODIFY ATTRIBUTES, INNERTEXT CAN ONLY MODIFY TEXT.
+
+attributes - Can access and modify attributes by adding ."attribute name" after the querySelector
+Other way: getAttribute('attr') - Shows 
+.setAttribute('attr', 'new') - Changes
+
+Changing styles - "element".style."property" = "x" - Will modify a given property.
+window.getComputedStyle('element').property
+
+classList - We can change classes with setAttribute, but only one at a time
+"element.classList.add/ .remove/ .contains/ .toggle ('class') - Will execute tasks
+regarding classes.
+
+RELATIVES 
+element.parentElement - Will show the element's parent
+.childElementCount
+.children - SELF EXPLANATORY
+.nextSibling and .previousSibling - Return previous and next NODE
+.nextElementSibling and .previousElementSibling - Return previous or next elements
+
+APPEND
+document.createElement('element') - Creates a new element
+parent.appendChild(newEl) - Appends the new element as a child of other element
+element.append('newEl') - Appends to the selected element
+.prepend - Same thing, but as the first child
+element.insertAdjacentElement(where, "newEl') - Adds as adjacent element.
+The where can be beforebegin, afterbegin, beforeend and afterend.
+.after() and .before() can also be used
+
+REMOVE 
+parent.removeChild(child) - Removes a child element
+element.remove(child) - Removes any given inside an element 
+
+-----------------------------------------------------------------------------------
+DOM EVENTS
+-----------------------------------------------------------------------------------
+
+onclick - element.onclick = function - Says what happens when element is clicked
+
+onmousenter - element.onmouseenter = function - Says what happens when mouse is in
+element area
+
+addEventListener - element.addEventListener('action', function, setting) - Creates events, 
+using different actions. 
+
+THIS:
+
+for (let button of buttons){
+    button.addEventListener('click', colorize)
+}
+
+for (let h1 of h1s){
+    h1.addEventListener('click', colorize)
+}
+
+function colorize(){
+    this.style.backgroundColor = makeRandColor()
+    this.style.color = makeRandColor()
+}
+
+THIS will execute whatever was called in the event, so we can REUSE the functions inside events.
+
+FORM EVENTS AND PREVENT DEFAULT: 
+
+HTML:
+
+    <h1>My Forms</h1>
+<form action="/shelter" id="shelterForm">
+    <input type="text" name="text" id="txt" placeholder="Insert text here">
+    <button>Submit</button>
+</form>
+<h2>Available cats</h2>
+<ul id="cats">
+
+</ul>
+
+JS:
+
+const form = document.querySelector('#shelterForm');
+
+const input = document.querySelector('#txt');
+
+const list = document.querySelector('#cats')
+
+form.addEventListener('submit', function (evt){
+    evt.preventDefault();
+    const catName = input.value;
+    const newLI = document.createElement('li');
+    newLI.innerText = catName;
+    cats.append(newLI);
+    input.value = "";
+})
+
+RETRIEVING INPUT INFO AND APPENDING IT TO THE PAGE. CHECK NOTES.
+
+INPUT AND CHANGE - 'input' and 'action' refer respectively to an action firing every time the user types, and
+an event firing whenever the mouse unfocuses from the input
+
+stopPropagation - evt.stopPropagation, will prevent any event from "bubbling" (Triggering parent elements, going up).
+Basically isolates an event into its own "bubble".
+
+-----------------------------------------------------------------------------------
+ASYNC JAVASCRIPT
+-----------------------------------------------------------------------------------
+
+CALLBACK HELL:
+
+const delayedColor = (newColor, delay, doNext) => {
+setTimeout(()=>{
+    document.body.style.backgroundColor = newColor;
+    doNext && doNext();
+}, delay)
+}
+
+
+
+delayedColor('red', 1000, () =>{
+    delayedColor('orange', 1000, () => {
+        delayedColor('yellow', 1000, () =>{
+            delayedColor('green', 1000, () =>{
+                delayedColor('blue', 1000)
+            })
+        })
+    })
+})
+
+This is an example of how nesting callbacks can work, in this context, with time delays.
+
+PROMISES - A WAY TO RUN FROM CALLBACK HELL
+
+Promises are objects representing the eventual completion or failure of an async operation.
+They work by executing an operation, then passing code for if the operation works, or if it doesn't.
+
+PROMISES STATUSES - pending (waiting for data), resolved (worked, ,.then), reject (didn't work, .catch)
+
+EXAMPLE CODE BASED ON CALLBACK HELL EXAMPLE:
+
+const colorDelay= (color, delay) => {
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+document.body.style.backgroundColor = color;
+resolve();
+        }, delay)
+    })
+}
+
+colorDelay('red', 1000)
+.then(() => colorDelay('orange', 1000))
+.then(() => colorDelay('yellow', 1000))
+.then(() => colorDelay('green', 1000))
+.then(() => colorDelay('blue', 1000))
+.then(() => colorDelay('indigo', 1000))
+.then(() => colorDelay('violet', 1000));
+
+READ THE NOTES. Promises are REALLY USEFUL. 
+
+
+ASYNC: Async creates an async function that automatically returns a promise. If a value is returned, the function is
+resolved. If a "throw" is used, the function is rejected. The "then, catch" dynamic works the same.
+
+EXAMPLE:
+
+const login = async (user, password) =>{
+    if (!user || !password) throw 'MISSING CREDENTIALS';
+    if (password === "macaco123") return 'LOGIN SUCCESSFUL'
+    throw 'Invalid Password'
+}
+
+login('macacoazul', 'macaco123')
+.then(msg => {
+console.log('LOGGED IN')
+console.log(msg)
+})
+.catch(err =>{
+    console.log('ERROR!')
+    console.log(err)
+})
+
+AWAIT: Will pause the execution of the function, waiting for a promise to be resolved.
+Basically saying "wait for this to end, then, continue"
+
+EXAMPLE:
+
+const colorDelay= (color, delay) => {
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => {
+document.body.style.backgroundColor = color;
+resolve();
+        }, delay)
+    })
+}
+
+
+async function rainbow(){
+    await colorDelay('red', 1000)
+    await colorDelay('orange', 1000)
+    await colorDelay('yellow', 1000)
+    await colorDelay('green', 1000)
+    await colorDelay('blue', 1000)
+    await colorDelay('violet', 1000)
+    await colorDelay('indigo', 1000)
+    return "DONE!"
+}
+
+async function printRainbow() {
+    await rainbow();
+    console.log('THE END')
+}
+
+printRainbow()
+
+
+HANDLING ERRORS IN ASYNC FUNCTIONS: 
+When an async function is rejected, use try/catch. The TRY will try to execute the 
+function, and if there's an error, a rejected promise, the catch will be activated
+
+-----------------------------------------------------------------------------------
+AJAX AND APIs
+-----------------------------------------------------------------------------------
+
+THE START OF THE SECTION IS HIGHLY ABSTRACT, LOOK INTO NOTEBOOK
+
+JSON: JavaScript Object Notation, used for retrieving data from APIs
+
+"x":"y" - MUST BE IN DOUBLE QUOTES
+
+JSON.parse(data) - Tells JS to extract and transform JSON data
+
+JSON.stringify(data) - Transforms JS into JSON data
+
+
+FETCH API: Newer way of making JS requests. Returns a promise
+
+fetch("https://swapi.dev/api/people/1/")  ---> Get me this data
+.then((res) =>{     -----> Get whatever the function returns(res) if resolved
+console.log('RESOLVED!', res);   ----> Tell me what it was
+return res.json() -----> Get this data and make it json readable
+.then((data) => {     --------> Get whatever was returned in that json readable
+    console.log(data);    ------> Tell me what was returned as json 
+    return fetch("https://swapi.dev/api/people/2/")  ------> Start over with another data
+})
+.then((res) =>{
+    console.log('SECOND REQUEST RESOLVED!!')
+    return res.json();
+})
+.then((data) =>{
+    console.log(data);
+
+})
+})
+.catch((err)=>{
+    console.log("ERROR", err);
+})
+
+SIMPLER WAY:
+
+const sw= async () =>{           ------> Create an asynchronous function named sw
+    const res = await fetch("https://swapi.dev/api/people/1/");   ----> Wait for this fetch to happen, name it res
+    const data = await res.json()   ----> Wait for the data to return, then make it json readable
+    console.log(data);  ---> Tell me what data returned
+    const res2 = await fetch("https://swapi.dev/api/people/2/");   ----> Wait for this fetch to happen, name it res
+    const data2 = await res2.json()   ----> Wait for the data to return, then make it json readable
+    console.log(data2);  ---> Tell me what data returned
+}
+
+sw(); ----> Execute sw
+
+
+AXIOS: A library for making HTTP requests. Must have its script tag added.
+
+axios.get('url') --> Gets required url
+Using a .then after will automatically parse the json
+
+const sw = async (id) => {
+    try{
+        const res = await axios.get(`https://swapi.dev/api/people/${id}/`);
+        console.log(res.data);
+    } catch(e){
+        console.log('ERROR!')
+    }
+}
+
+AXIOS HEADERS: Read the docs, because every API is different. 
+
+const func = async ()=>{
+    const x = {headers:{Accept: 'header name'}}
+    const res = await axios.get('link', x)
+}
+
+

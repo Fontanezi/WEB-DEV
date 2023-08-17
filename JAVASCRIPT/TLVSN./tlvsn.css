@@ -1,0 +1,24 @@
+body {
+    background-image: url('https://4kwallpapers.com/images/wallpapers/ios-13-stock-ipados-red-black-background-amoled-ipad-hd-1680x1050-792.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+.phrase {
+    text-align: center;
+    position: relative;
+    top: 300px;
+    color: rgb(231, 225, 225);
+}
+
+.displayArea {
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: #FF0000;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}

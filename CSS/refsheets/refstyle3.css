@@ -1,0 +1,74 @@
+body{
+    background-color: #caf0f8;
+}
+
+img{
+    width: 100px;
+}
+
+h1{
+    position:relative; left: 100px; top: -100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+}
+
+#logo{
+    position:relative; left: 105px; top: -128px; 
+    font-style: italic;
+    font-size: 20px;
+
+}
+
+.logoborder{
+    border-style: solid;
+    height: 110px;
+    border-radius: 10px;
+}
+
+#nav{
+    position: relative; 
+}
+
+section{
+    position: relative; 
+}
+
+.userpost{
+    position: relative; top: -15px
+
+}
+
+.tag{
+    position: relative; left:7px;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #0077b6;
+    color: white;
+}
+
+.tag:hover{
+    background-color: white;
+    color: #0077b6;
+}
+
+.buttons{
+    position: relative; left: 1150px; top: -20px
+}
+
+.usrpost{
+    text-decoration: none;
+}
+
+.usrpost:hover{
+    text-decoration: underline;
+}
+
+.post-title{
+    color: black;
+    text-decoration: none; 
+}
+
+.post-title:hover{
+text-decoration: underline;
+
+}

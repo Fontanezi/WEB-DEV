@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Test</title>
+</head>
+
+<body>
+    <h1>More Inputs</h1>
+    <form action="/input">
+        <input type="checkbox" name="agree_tos" id="agree">
+        <label for="agree">I agree</label>
+        <p>
+            <label for="P">P</label>
+            <input type="radio" name="size" id="P" value="P">
+            <label for="M">M</label>
+            <input type="radio" name="size" id="M" value="M">
+            <label for="G">G</label>
+            <input type="radio" name="size" id="G" value="G">
+        </p>
+        <p>
+            <label for="meal">Select a meal:</label>
+            <select name="meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="burger">Burger</option>
+                <option value="fries">Fries</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Amount of cheese:</label>
+            <input type="range" name="cheese" id="cheese" min="0" max="10" step="1">
+        </p>
+        <p>
+            <label for="request">Special requests:</label>
+            <textarea placeholder="Ÿour requests" id="request" name="request" rows="10" cols="40"></textarea>
+        </p>
+        <button>Submit</button>
+    </form>
+
+</body>
+
+</html>

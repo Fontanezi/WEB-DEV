@@ -1,0 +1,69 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: pink;
+}
+
+.navbar-brand {
+    color: rgb(147, 31, 52);
+    transition: 0.25s;
+}
+
+.navbar-brand:hover {
+    color: rgb(147, 31, 52);
+}
+
+.navbar-brand:focus {
+    color: rgb(147, 31, 52);
+}
+
+.nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.nav-link:hover {
+    color: rgb(147, 31, 52);
+}
+
+.nav-link:focus {
+    color: rgb(147, 31, 52);
+}
+
+.main-text {
+    color: white;
+}
+
+.bar {
+    color: rgb(147, 31, 52);
+}
+
+.side-text {
+    color: rgb(147, 31, 52);
+}
+
+.text {
+    color: rgb(147, 31, 52);
+    text-align: center;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    transition: background 500ms;
+}
+ 
+
+.navbar.scrolled {
+    background: rgb(207, 130, 210);
+}
