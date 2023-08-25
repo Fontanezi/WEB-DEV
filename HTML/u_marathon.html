@@ -12,28 +12,28 @@
     <form action="">
         <div>
             <label for="fn">First Name</label>
-            <input type="text" id="fn" name="firstname">
+            <input type="text" id="fn" name="firstname" required>
             <label for="ln">Last Name</label>
-            <input type="text" id="ln" name="lastname">
+            <input type="text" id="ln" name="lastname" required>
         </div>
         <div>
             <p>Select a race:</p>
-            <input type="radio" name="race" id="funrun5k" value="funrun5k">
+            <input type="radio" name="race" id="funrun5k" value="funrun5k" required>
             <label for="funrun5k">Fun Run 5k</label>
         </div>
         <div>
-            <input type="radio" name="race" id="halfmarathon" value="halfmarathon">
+            <input type="radio" name="race" id="halfmarathon" value="halfmarathon" required>
             <label for="halfmarathon">Half Marathon</label>
         </div>
         <div>
-            <input type="radio" name="race" id="fullmarathon" value="fullmarathon">
+            <input type="radio" name="race" id="fullmarathon" value="fullmarathon" required>
             <label for="halfmarathon">Full Marathon</label>
         </div>
         <div>
             <label for="mail">Email</label>
-            <input type="email" id="mail" name="email">
+            <input type="email" id="mail" name="email" required>
             <label for="password">Password</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" minlength="8" required>
         </div>
         <div>
             <label for="age">Select Age Group</label>
