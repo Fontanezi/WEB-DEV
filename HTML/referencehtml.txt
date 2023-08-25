@@ -4,7 +4,7 @@ SEE MDN REFERENCE FOR MORE GUIDANCE!
 TEXT
 -----------------------------------------------------------------------------------
 
-html:5 - Creates the HTML Boilerplate
+htmlx:5 - Creates the HTML Boilerplate
 
 <h1> </h1> - Creates a title element. Can be h2, 3, 4, and so on.
 
