@@ -52,7 +52,7 @@ SELECTORS
 
 h1, h2{} - Selector list, applies properties to all selected elements, using commas
 
-#nameid {} - The ID selector, styles only the specified ID
+#nameid{} - The ID selector, styles only the specified ID
 
 .nameofclass{} -  The class selector, styles specified classes
 
@@ -132,9 +132,13 @@ display:none - Makes element disappear
 OTHER ELEMENTS
 -----------------------------------------------------------------------------------
 
+SIZES: Prioritize em, rem and %, with occasional uses of px.
+
 rgba (255, 112, 204, 0.5) - The ALPHA CHANNEL, controls transparency
 
 opacity: 0.x - Same thing, but impacts all elements in the region
+
+!important - Overrides CSS specificity. Try not to use it.
 
 position: - Changes objects positions
  
